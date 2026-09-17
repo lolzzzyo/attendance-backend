@@ -1,7 +1,5 @@
 package com.example.attendancebackend.model;
 
-
-import com.example.attendancebackend.dto.EventOverviewDto;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

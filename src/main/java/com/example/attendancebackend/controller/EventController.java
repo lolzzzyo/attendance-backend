@@ -2,7 +2,6 @@ package com.example.attendancebackend.controller;
 
 import com.example.attendancebackend.dto.EventAttendanceOverviewDto;
 import com.example.attendancebackend.dto.EventOverviewDto;
-import com.example.attendancebackend.model.Event;
 import com.example.attendancebackend.model.EventArchiveRequest;
 import com.example.attendancebackend.model.EventCreateRequest;
 import com.example.attendancebackend.model.EventUpdateRequest;
