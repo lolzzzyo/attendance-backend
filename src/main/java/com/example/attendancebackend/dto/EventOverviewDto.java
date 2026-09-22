@@ -12,14 +12,16 @@ public class EventOverviewDto {
     private String location;
     private String description;
     private AttendanceStatus myAttendance;
+    private long attendingCount;
 
-    public EventOverviewDto(Long id, LocalDateTime startDateTime, LocalDateTime endDateTime, String location, String description, AttendanceStatus attendanceStatus) {
+    public EventOverviewDto(Long id, LocalDateTime startDateTime, LocalDateTime endDateTime, String location, String description, AttendanceStatus attendanceStatus, long attendingCount) {
         this.id = id;
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
         this.location = location;
         this.description = description;
         this.myAttendance = attendanceStatus;
+        this.attendingCount = attendingCount;
     }
 
     public Long getId() {
@@ -46,6 +48,4 @@ public class EventOverviewDto {
         return myAttendance;
     }
 
-    // constructor
-    // getters
 }

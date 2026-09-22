@@ -1,6 +1,8 @@
 package com.example.attendancebackend.repository;
 
 import com.example.attendancebackend.model.Attendance;
+import com.example.attendancebackend.model.AttendanceStatus;
+import com.example.attendancebackend.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
@@ -15,4 +17,6 @@ public interface AttendanceRepository
     );
 
     List<Attendance> findByEventId(Long eventId);
+
+    long countByEventIdAndStatusAndRole(Long eventId, AttendanceStatus status, Role role);
 }

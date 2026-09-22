@@ -51,6 +51,12 @@ public class EventService {
                                             event.getId())
                                     .orElse(null);
 
+                    long attendingCount =
+                            attendanceRepository.countByEventIdAndStatusAndRole(
+                                    event.getId(),
+                                    AttendanceStatus.ATTENDING,
+                                    Role.USER);
+
                     return new EventOverviewDto(
                             event.getId(),
                             event.getStartDateTime(),
@@ -59,7 +65,8 @@ public class EventService {
                             event.getDescription(),
                             attendance != null
                                     ? attendance.getStatus()
-                                    : null
+                                    : null,
+                            attendingCount
                     );
                 })
                 .toList();
@@ -83,6 +90,12 @@ public class EventService {
                                             event.getId())
                                     .orElse(null);
 
+                    long attendingCount =
+                            attendanceRepository.countByEventIdAndStatusAndRole(
+                                    event.getId(),
+                                    AttendanceStatus.ATTENDING,
+                                    Role.USER);
+
                     return new EventOverviewDto(
                             event.getId(),
                             event.getStartDateTime(),
@@ -91,7 +104,8 @@ public class EventService {
                             event.getDescription(),
                             attendance != null
                                     ? attendance.getStatus()
-                                    : null
+                                    : null,
+                            attendingCount
                     );
                 })
                 .toList();
@@ -238,6 +252,12 @@ public class EventService {
                                     )
                                     .orElse(null);
 
+                    long attendingCount =
+                            attendanceRepository.countByEventIdAndStatusAndRole(
+                                    event.getId(),
+                                    AttendanceStatus.ATTENDING,
+                                    Role.USER);
+
                     return new EventOverviewDto(
                             event.getId(),
                             event.getStartDateTime(),
@@ -246,7 +266,8 @@ public class EventService {
                             event.getDescription(),
                             attendance != null
                                     ? attendance.getStatus()
-                                    : null
+                                    : null,
+                            attendingCount
                     );
                 })
                 .toList();
