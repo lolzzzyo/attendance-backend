@@ -48,4 +48,8 @@ public class EventOverviewDto {
         return myAttendance;
     }
 
+    public long getAttendingCount() {
+        return attendingCount;
+    }
+
 }
