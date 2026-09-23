@@ -6,17 +6,20 @@ public class EventUserAttendanceDto {
 
     private Long accountId;
     private String firstName;
+    private String nickName;
     private String lastName;
     private AttendanceStatus attendance;
 
     public EventUserAttendanceDto(
             Long accountId,
             String firstName,
+            String nickName,
             String lastName,
             AttendanceStatus attendance) {
 
         this.accountId = accountId;
         this.firstName = firstName;
+        this.nickName = nickName;
         this.lastName = lastName;
         this.attendance = attendance;
     }
@@ -27,6 +30,10 @@ public class EventUserAttendanceDto {
 
     public String getFirstName() {
         return firstName;
+    }
+
+    public String getNickName() {
+        return nickName;
     }
 
     public String getLastName() {

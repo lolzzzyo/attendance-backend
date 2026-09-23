@@ -298,6 +298,7 @@ public class EventService {
                         .map(account -> new EventUserAttendanceDto(
                                 account.getId(),
                                 account.getFirstName(),
+                                account.getNickname(),
                                 account.getLastName(),
                                 statusByAccountId.get(account.getId())
                         ))
