@@ -3,6 +3,7 @@ package com.example.attendancebackend.dto;
 import com.example.attendancebackend.model.AttendanceStatus;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class EventOverviewDto {
 
@@ -13,8 +14,9 @@ public class EventOverviewDto {
     private String description;
     private AttendanceStatus myAttendance;
     private long attendingCount;
+    private UUID recurrenceGroupId;
 
-    public EventOverviewDto(Long id, LocalDateTime startDateTime, LocalDateTime endDateTime, String location, String description, AttendanceStatus attendanceStatus, long attendingCount) {
+    public EventOverviewDto(Long id, LocalDateTime startDateTime, LocalDateTime endDateTime, String location, String description, AttendanceStatus attendanceStatus, long attendingCount,  UUID recurrenceGroupId) {
         this.id = id;
         this.startDateTime = startDateTime;
         this.endDateTime = endDateTime;
@@ -22,6 +24,7 @@ public class EventOverviewDto {
         this.description = description;
         this.myAttendance = attendanceStatus;
         this.attendingCount = attendingCount;
+        this.recurrenceGroupId = recurrenceGroupId;
     }
 
     public Long getId() {
@@ -50,6 +53,10 @@ public class EventOverviewDto {
 
     public long getAttendingCount() {
         return attendingCount;
+    }
+
+    public UUID getRecurrenceGroupId() {
+        return recurrenceGroupId;
     }
 
 }

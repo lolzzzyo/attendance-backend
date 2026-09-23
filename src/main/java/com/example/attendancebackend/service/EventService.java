@@ -66,7 +66,8 @@ public class EventService {
                             attendance != null
                                     ? attendance.getStatus()
                                     : null,
-                            attendingCount
+                            attendingCount,
+                            event.getRecurrenceGroupId()
                     );
                 })
                 .toList();
@@ -105,7 +106,8 @@ public class EventService {
                             attendance != null
                                     ? attendance.getStatus()
                                     : null,
-                            attendingCount
+                            attendingCount,
+                            event.getRecurrenceGroupId()
                     );
                 })
                 .toList();
@@ -267,7 +269,8 @@ public class EventService {
                             attendance != null
                                     ? attendance.getStatus()
                                     : null,
-                            attendingCount
+                            attendingCount,
+                            event.getRecurrenceGroupId()
                     );
                 })
                 .toList();
