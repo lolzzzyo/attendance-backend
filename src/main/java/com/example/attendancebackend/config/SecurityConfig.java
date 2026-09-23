@@ -85,7 +85,8 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(List.of(
-                "http://localhost:4200"
+                "http://localhost:4200",
+                "https://boldt-frontend.vercel.app"
         ));
 
         configuration.setAllowedMethods(List.of(
